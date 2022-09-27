@@ -9,7 +9,6 @@ require "yaml"
 #May need to run this
 # gem install wkhtmltoimage-binary
 
-
 config = YAML.load_file('config.yaml')
 @@FACEBOOK_TOKEN = config["FACEBOOK_TOKEN"]
 
@@ -62,7 +61,6 @@ def write_html_for_multi_image_post
 
   @fileHtml.close()
 end
-#PLEASE DONT BREAK
 
 def write_html_for_word_post
   @fileHtml = File.new("output/#{@file_name}.html", "w+")
@@ -325,7 +323,6 @@ def start_program
   convert_html_to_png
   push_image_to_facebook
 end
-
 
 start_program
 
